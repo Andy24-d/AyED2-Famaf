@@ -78,6 +78,15 @@ void mostrar_moto(moto_t moto) {
     printf("   %i          %i\n", moto->rueda_delantera->pinchada, moto->rueda_trasera->pinchada);
 }
 
+void reparar_rueda(struct _rueda* rueda) {
+    if (rueda->pinchada) {
+        free(rueda);
+        rueda = malloc(sizeof(struct _rueda));
+        rueda->pinchada = false;
+    } 
+    rueda->presion = PRESION_OPTIMA;
+}
+
 /**
  * @brief Repara las ruedas de la moto
  *
@@ -89,11 +98,14 @@ void mostrar_moto(moto_t moto) {
  */
 void reparar_moto(moto_t moto) {
 
-    // 
-    // COMPLETAR!!
-    //
+    // Rueda delantera
+    reparar_rueda(moto->rueda_delantera);
+    // Rueda trasera
+    reparar_rueda(moto->rueda_trasera);
 
 }
+
+
 
 /**
  * @brief Destruye la moto, liberando toda la memoria
