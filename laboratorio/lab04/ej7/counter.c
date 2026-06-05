@@ -10,19 +10,20 @@ struct _counter {
 
 counter counter_init(void) {
     counter c = malloc(sizeof(struct _counter));
+    assert(c != NULL);
     
-    if (c != NULL){
-        c->count = 0;
-    }
+    c->count = 0;
+        
+    
 
     return c;
     
 }
 
 void counter_inc(counter c) {
-    if (c != NULL){
-        c->count++;
-    }
+    assert(c != NULL);
+    c->count++;
+    
 }
 
 bool counter_is_init(counter c) {
