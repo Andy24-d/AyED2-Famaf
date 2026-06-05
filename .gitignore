@@ -1,5 +1,6 @@
 # Archivos objeto compilados
 *.o
+main
 
 # Otros archivos que típicamente se ignoran en C
 *.a
