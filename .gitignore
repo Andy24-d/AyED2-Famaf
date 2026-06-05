@@ -1,0 +1,15 @@
+# Archivos objeto compilados
+*.o
+
+# Otros archivos que típicamente se ignoran en C
+*.a
+*.out
+*.exe
+*.so
+
+# Archivos de editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
