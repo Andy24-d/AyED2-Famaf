@@ -7,14 +7,14 @@
 //Si queres que se muestre bien (editar %d del printf)
 static 
 void show_pair(pair_t p) {
-    printf("(%c, %c)\n", pair_first(p), pair_second(p));
+    printf("(%d, %d)\n", pair_first(p), pair_second(p));
 }
 
 int main(void) { 
     pair_t p, q;
 
     // Nuevo par p
-    p = pair_new('a', 'b');
+    p = pair_new(4, 3);
 
     // Se muestra el par por pantalla
     printf("p = ");
