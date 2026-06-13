@@ -187,7 +187,8 @@ list take(list l, int n){
  * @brief Removes the first `n` elements of `l` in-place.
  */
 list drop(list l, int n){
-    for(int i=0; i != n; i++){
+
+    for(int i=0; i != n && !is_empty(l); i++){
         l = tail(l);
     }
 

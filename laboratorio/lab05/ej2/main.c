@@ -46,6 +46,33 @@ float average(list l) {
 
 }
 
+list daditos (list p1, list p2) {
+    //Gana dado mas bajo
+    //Gano p1 => add 1
+    //Gano p2 => add 2
+    //Empate => si ronda par gana 2
+    //          si ronda impar gana 1
+    //Ronda inicial = 1
+    list negro = empty();
+int n = length(p1);
+    for(int i= 0; i<n;i++){
+        if(index(p1, i)<index(p2, i)){
+            negro = addr(negro, 1);
+        }
+        else if(index(p1, i)>index(p2, i)){
+            negro = addr(negro, 2);
+        }
+        else{
+            if(i+1%2==0){
+                negro = addr(negro, 1);
+            }else{
+                negro = addr(negro, 2);
+            }
+        }
+    }
+    return negro;
+}
+
 list array_to_list(int array[], unsigned int length) {
     /* Initialize the list */
     list l = empty();
